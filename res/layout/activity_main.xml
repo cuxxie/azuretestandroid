@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${packageName}.${activityClass}" >
+
+    <RelativeLayout
+        android:id="@+id/layoutLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_centerHorizontal="true">
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:ems="10"
+        android:hint="Username" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/username"
+        android:layout_alignLeft="@+id/username"
+        android:layout_alignRight="@+id/username"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="numberPassword" />
+
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/username"
+        android:layout_alignTop="@id/username"
+        android:layout_alignBottom="@id/password"
+        android:onClick="doLogin"
+        android:text="Login" />
+	</RelativeLayout>
+     <Button
+        android:id="@+id/takeLeave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutLogin"
+        android:layout_alignRight="@id/layoutLogin"
+        android:onClick="doTakeLeave"
+        android:text="Take Leave" />
+    <Button
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_toLeftOf="@id/takeLeave"
+        android:onClick="doAdd"
+        android:text="Add" />
+    <Button
+        android:id="@+id/pdf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_toLeftOf="@id/add"
+        android:text="Generate PDF" />
+
+    
+    <ListView
+        android:id="@+id/listViewEmployee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add"
+        tools:listitem="@layout/list_fragment" 
+        android:divider="#111111"
+        android:dividerHeight="4px"
+        android:padding="6dip" >
+
+    </ListView>
+    
+</RelativeLayout>

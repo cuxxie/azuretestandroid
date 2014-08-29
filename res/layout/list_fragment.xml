@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+    
+    <!-- 
+id	string	
+emp_id	string	
+name	string	
+dept	string	
+al	number	
+al_taken	number	
+mc	number  -->
+    
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name" />
+
+    <TextView
+        android:id="@+id/txtEmpId"
+        android:layout_below="@id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Employee ID" />
+
+    <TextView
+        android:id="@+id/txtDept"
+        android:layout_below="@id/txtEmpId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Department" />
+            
+   <TextView
+        android:id="@+id/txtAL"
+        android:layout_below="@id/txtDept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AL" />
+   <TextView
+        android:id="@+id/txtALT"
+        android:layout_below="@id/txtAL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AL_taken" />
+   <TextView
+        android:id="@+id/txtMC"
+        android:layout_below="@id/txtALT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MC" />
+   
+   <Button 
+       android:id="@+id/btndelete"
+       android:layout_alignParentRight="true"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignTop="@id/txtName"
+       android:layout_alignBottom="@id/txtMC"
+       android:text="Delete"
+       android:textAlignment="gravity"
+       android:onClick="doDelete"
+       />
+</RelativeLayout>
